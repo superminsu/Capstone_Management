@@ -16,7 +16,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         
-        //http.csrf().disable();
+        //로그인 폼 설정
         http.formLogin()
             .loginPage("/member/login")        //로그인 페이지 설정
             .defaultSuccessUrl("/")            //로그인 성공 페이지
