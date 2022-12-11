@@ -16,7 +16,7 @@ public interface CapstoneFileRepository extends JpaRepository<CapstoneFile, Long
 
     static final String UPDATE_DELETE_YN = "UPDATE capstone_file " + "SET DELETE_YN = 'Y' " + "WHERE ID IN (:deleteIdList)";
 
-    static final String DELETE_BOARD_FILE_YN = "UPDATE capstone_file " + "SET DELETE_YN = 'Y' " + "WHERE BOARD_ID IN (:boardIdList)";
+    static final String DELETE_CAPSTONE_FILE_YN = "UPDATE capstone_file " + "SET DELETE_YN = 'Y' " + "WHERE BOARD_ID IN (:boardIdList)";
 
 
     @Query(value = SELECT_FILE_ID, nativeQuery = true)
@@ -29,6 +29,6 @@ public interface CapstoneFileRepository extends JpaRepository<CapstoneFile, Long
     
     @Transactional
     @Modifying
-    @Query(value = DELETE_BOARD_FILE_YN, nativeQuery = true)
-    public int deleteBoardFileYn(@Param("boardIdList") Long[] boardIdList);
+    @Query(value = DELETE_CAPSTONE_FILE_YN, nativeQuery = true)
+    public int deleteCapstoneFileYn(@Param("boardIdList") Long[] boardIdList);
 }

@@ -135,7 +135,7 @@ public class CapstoneFileService {
         return capstoneFileRepository.updateDeleteYn(deleteIdList);
     }
 
-    public int deleteBoardFileYn(Long[] boardIdList) throws Exception {
-        return capstoneFileRepository.deleteBoardFileYn(boardIdList);
+    public int deleteCapstoneFileYn(Long[] boardIdList) throws Exception {
+        return capstoneFileRepository.deleteCapstoneFileYn(boardIdList);
     }
 }

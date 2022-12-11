@@ -21,7 +21,7 @@ public abstract class BaseTimeEntity {
 
     @CreatedDate                    //생성한 시간 등록
     @Column(updatable = false)      //변경 불가능
-    private LocalDateTime regTime;
+    private LocalDateTime registerTime;
     
     @LastModifiedDate               //변경한 시간 등록
     private LocalDateTime updateTime;

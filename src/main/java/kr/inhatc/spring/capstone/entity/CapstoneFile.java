@@ -26,7 +26,7 @@ public class CapstoneFile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "capstone_id")
+    @Column(name = "capstone_file_id")
     private Long id;
     
     private Long boardId;
