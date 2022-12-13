@@ -28,7 +28,7 @@ public interface CapstoneRepository extends JpaRepository<Capstone, Long>{
     @Transactional
     @Modifying
     @Query(value = UPDATE_CAPSTONE, nativeQuery = true)
-    public int updateCapstone(@Param("boardRequestDto") CapstoneRequestDto capstoneRequestDto);
+    public int updateCapstone(@Param("capstoneRequestDto") CapstoneRequestDto capstoneRequestDto);
     
     @Transactional
     @Modifying
